@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style_sprint1.css" />
+    <script src="sprint.js"></script>
+    <title>Sprint 1</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <aside>
+        <div class="card_container front">
+          <img src="imagenes/bg-card-front.png" alt="frente de tarjeta" />
+
+          <div class="card_info_front">
+            <div class="cclinea1">
+              <div class="circ1"></div>
+              <div class="circ2"></div>
+            </div>
+
+            <p class="cclinea2" id="number">0000 0000 0000 0000</p>
+
+            <div class="cclinea3">
+              <p class="name" id="nombre">JANE APPLESEED</p>
+              <p id="expdate">00/00</p>
+            </div>
+          </div>
+        </div>
+        <div class="card_container back">
+          <img src="imagenes/bg-card-back.png" alt="reverso de tarjeta" />
+          <div class="card_info_back">
+            <span>000</span>
+          </div>
+        </div>
+      </aside>
+
+      <main>
+        <form>
+          <div class="cardholdername">
+            <label for="cardholderName">CARDHOLDER NAME</label>
+            <input
+              onchange="updateName()"
+              type="text"
+              name="Name"
+              id="cardholderName"
+              placeholder="e.g. Jane Appleseed"
+              required
+            />
+          </div>
+
+          <div class="cardnumber">
+            <label for="cardNumber">CARD NUMBER</label>
+            <input
+              type="text"
+              name="Number"
+              id="cardNumber"
+              placeholder="e.g. 1234 5678 9012 3456"
+              required
+            />
+            <span class="no_valida">Wrong format - Numbers only</span>
+          </div>
+
+          <div class="expcvc">
+            <div class="expdate">
+              <label for="expDate">EXP. DATE (MM / YY)</label>
+              <div class="mmyy">
+                <input
+                  class="month"
+                  type="text"
+                  name="month"
+                  required
+                  placeholder="MM"
+                />
+                <input
+                  class="year"
+                  type="text"
+                  name="year"
+                  required
+                  placeholder="YY"
+                />
+              </div>
+              <span class="no_valida">Can't be blank</span>
+            </div>
+
+            <div class="cvc">
+              <label for="cvc">CVC</label>
+              <input
+                class="cvc"
+                type="text"
+                name="cvc"
+                id="cvc"
+                required
+                placeholder="e.g. 123"
+                pattern="[0-9]{3}"
+              />
+              <span class="no_valida">Can't be blank</span>
+            </div>
+          </div>
+
+          <button class="boton" type="submit">Confirm</button>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>

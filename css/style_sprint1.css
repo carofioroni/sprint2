@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+}
+.wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  font-weight: 300;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+aside {
+  width: 33%;
+  height: 100%;
+  /* background por si no carga la imagen ? */
+  background-color: rgb(26, 25, 73);
+  background-image: url("../imagenes/bg-main-desktop.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+.card_container {
+  width: 447px;
+  height: 245px;
+  position: relative;
+}
+
+.front {
+  left: 25%;
+}
+.back {
+  left: 40%;
+}
+.card_container img {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.card_info_front {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  position: relative;
+  z-index: 2;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card_info_back {
+  width: 100%;
+  height: 100%;
+  padding: 60px;
+  position: relative;
+  z-index: 2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.cclinea1 {
+  margin-bottom: 10%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.circ1 {
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  border-radius: 50%;
+}
+.circ2 {
+  width: 20px;
+  height: 20px;
+  border: solid 1px white;
+  border-radius: 50%;
+}
+.cclinea2 {
+  letter-spacing: 0.16em;
+  font-size: 26px;
+}
+.cclinea3 {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  width: 67%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 380px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  left: 10%;
+}
+
+label {
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  font-size: 12px;
+}
+input {
+  width: 100%;
+  height: 44px;
+  border-radius: 5px;
+  border: 1px solid rgb(200, 200, 200);
+  margin-top: 5px;
+  padding-left: 15px;
+}
+input:focus {
+  border-image: linear-gradient(90deg, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+}
+.expcvc {
+  display: flex;
+}
+.mmyy {
+  display: flex;
+  margin-right: 16px;
+  gap: 8px;
+}
+.boton {
+  height: 52px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+}
+.no_valida {
+  font-size: 12px;
+  color: hsl(0, 100%, 66%);
+  letter-spacing: normal;
+}
+
+/* ACA EMPIEZA EL MEDIA QUERY */
+
+@media (max-width: 500px) {
+  .wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+
+  aside {
+    width: 100%;
+    height: 30%;
+    flex-direction: column-reverse;
+    background-image: url("../imagenes/bg-main-mobile.png");
+    padding-left: 0;
+    position: relative;
+  }
+
+  .card_container {
+    width: 280px;
+    height: 153px;
+    left: 0;
+    position: relative;
+  }
+
+  main {
+    width: 100%;
+    height: 70%;
+    align-items: flex-end;
+    padding-bottom: 25px;
+  }
+
+  form {
+    width: 320px;
+    left: 0;
+  }
+
+  .front {
+    top: 90px;
+    left: -20px;
+    z-index: 1;
+  }
+  .back {
+    position: absolute;
+    left: 70px;
+  }
+  .card_info_front {
+    padding: 20px;
+  }
+  .card_info_back {
+    padding: 40px;
+  }
+
+  .cclinea1 {
+    gap: 12px;
+  }
+  .circ1 {
+    width: 30px;
+    height: 30px;
+  }
+  .circ2 {
+    width: 15px;
+    height: 15px;
+  }
+  .cclinea2 {
+    letter-spacing: 0.1em;
+    font-size: 18px;
+  }
+}
